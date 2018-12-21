@@ -1,0 +1,1249 @@
+@-ms-viewport {
+  width: device-width; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-overflow-style: scrollbar; }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+.page-header__inner, .drugs__inner, .game__inner, .page-footer__inner, .results__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1055px;
+  width: 100%;
+  margin: auto;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (max-width: 1200px) {
+    .page-header__inner, .drugs__inner, .game__inner, .page-footer__inner, .results__inner {
+      max-width: 750px; } }
+  @media (max-width: 768px) {
+    .page-header__inner, .drugs__inner, .game__inner, .page-footer__inner, .results__inner {
+      max-width: 570px; } }
+  @media (max-width: 576px) {
+    .page-header__inner, .drugs__inner, .game__inner, .page-footer__inner, .results__inner {
+      max-width: 100%; } }
+
+.page-wrapper, .page-header, .drugs, .game, .results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 100%; }
+  @media (max-width: 768px) {
+    .page-wrapper, .page-header, .drugs, .game, .results {
+      margin: 0; } }
+
+html,
+body {
+  height: 100%; }
+  @media (max-width: 1200px) {
+    html,
+    body {
+      height: auto; } }
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d6e3ec), to(#e1ebf1));
+  background: linear-gradient(to top, #d6e3ec, #e1ebf1);
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  -webkit-overflow-scrolling: touch; }
+
+.page__modal {
+  position: fixed;
+  top: 50%;
+  margin-top: -185px;
+  width: 740px; }
+  @media (max-width: 768px) {
+    .page__modal {
+      width: 95%; } }
+
+.page::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #707e8d;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  -webkit-transition: visibility 0s, opacity .55s;
+  transition: visibility 0s, opacity .55s; }
+
+.page_modal_show::after {
+  opacity: .5;
+  visibility: visible; }
+
+.page_modal_show .modal {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: visibility 0s, opacity .55s, -webkit-transform .55s;
+  transition: visibility 0s, opacity .55s, -webkit-transform .55s;
+  transition: visibility 0s, opacity .55s, transform .55s;
+  transition: visibility 0s, opacity .55s, transform .55s, -webkit-transform .55s; }
+  .page_modal_show .modal_greeting {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: visibility 0s, opacity .55s .35s, -webkit-transform .55s .35s ease-out;
+    transition: visibility 0s, opacity .55s .35s, -webkit-transform .55s .35s ease-out;
+    transition: visibility 0s, opacity .55s .35s, transform .55s .35s ease-out;
+    transition: visibility 0s, opacity .55s .35s, transform .55s .35s ease-out, -webkit-transform .55s .35s ease-out; }
+
+.page_modal_afford .modal,
+.page_modal_close .modal,
+.page_modal_average .modal {
+  border: 3px solid #d15050; }
+
+.page_modal_afford .modal__header,
+.page_modal_close .modal__header,
+.page_modal_average .modal__header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #d15050; }
+
+.page_modal_afford .modal__answer,
+.page_modal_close .modal__answer,
+.page_modal_average .modal__answer {
+  font-size: 19px;
+  text-transform: none; }
+  @media (max-width: 768px) {
+    .page_modal_afford .modal__answer,
+    .page_modal_close .modal__answer,
+    .page_modal_average .modal__answer {
+      font-size: 17px; } }
+
+.page_modal_afford .modal__results,
+.page_modal_close .modal__results,
+.page_modal_average .modal__results {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.page_modal_afford .modal__result,
+.page_modal_close .modal__result,
+.page_modal_average .modal__result {
+  margin-bottom: 10px; }
+  .page_modal_afford .modal__result + .modal__result,
+  .page_modal_close .modal__result + .modal__result,
+  .page_modal_average .modal__result + .modal__result {
+    margin-bottom: 0; }
+
+.page_modal_afford .modal__value_precision,
+.page_modal_afford .modal__value_price,
+.page_modal_close .modal__value_precision,
+.page_modal_close .modal__value_price,
+.page_modal_average .modal__value_precision,
+.page_modal_average .modal__value_price {
+  margin-left: 10px; }
+
+.page_modal_afford .game__amount,
+.page_modal_close .game__amount,
+.page_modal_average .game__amount {
+  border: 1px solid #d15050; }
+
+.page_modal_close .modal {
+  border: 3px solid #00a886; }
+
+.page_modal_close .modal__header {
+  background: #00a886; }
+
+.page_modal_close .game__amount {
+  border: 1px solid #00a886; }
+
+.link {
+  font-size: 12px;
+  font-style: italic;
+  color: #23288b; }
+  @media (max-width: 768px) {
+    .link {
+      font-size: 11px; } }
+  .link_repeat {
+    display: block;
+    font-size: 20px;
+    font-style: normal;
+    text-decoration: none;
+    color: #00a886;
+    margin-top: 20px;
+    padding-left: 60px; }
+    @media (max-width: 768px) {
+      .link_repeat {
+        font-size: 14px;
+        padding-left: 0;
+        text-align: center; } }
+
+.page-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden; }
+  @media (max-width: 1200px) {
+    .page-wrapper {
+      padding: 35px 0; } }
+  @media (max-width: 768px) {
+    .page-wrapper {
+      margin: auto;
+      padding-top: 0; } }
+
+.page-header {
+  position: relative;
+  margin-top: 0;
+  padding: 15px 0; }
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 18px 0; } }
+  @media (max-width: 576px) {
+    .page-header {
+      padding-top: 0;
+      overflow: hidden; } }
+
+.page-header__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 576px) {
+    .page-header__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  @media (max-width: 576px) {
+    .page-header__inner {
+      padding: 0; } }
+
+.page-header__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 0.875;
+  text-transform: uppercase;
+  color: #00a886;
+  letter-spacing: 2px; }
+  .page-header__title small {
+    font-size: 24px; }
+  @media (max-width: 1200px) {
+    .page-header__title {
+      font-size: 28px; }
+      .page-header__title small {
+        font-size: 18px; } }
+  @media (max-width: 768px) {
+    .page-header__title {
+      font-size: 20px;
+      line-height: 1.1; }
+      .page-header__title small {
+        font-size: 15px; } }
+  @media (max-width: 576px) {
+    .page-header__title {
+      margin-top: 30px;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      font-size: 18px; } }
+
+.logo {
+  position: absolute;
+  width: 100%;
+  right: -600px;
+  background: #00a886; }
+  @media (max-width: 1200px) {
+    .logo {
+      right: -420px; } }
+  @media (max-width: 768px) {
+    .logo {
+      right: -300px; } }
+  @media (max-width: 576px) {
+    .logo {
+      position: static; } }
+
+.logo__img {
+  display: block; }
+  @media (max-width: 1200px) {
+    .logo__img {
+      max-width: 325px; } }
+  @media (max-width: 768px) {
+    .logo__img {
+      max-width: 260px; } }
+  @media (max-width: 576px) {
+    .logo__img {
+      margin: 0 auto;
+      max-width: 300px; } }
+
+.drugs {
+  height: 435px;
+  margin-top: 50px;
+  background: url("../img/drugs.png") no-repeat center bottom -30px;
+  position: relative; }
+
+.drugs__inner {
+  height: 335px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  position: relative;
+  top: -18px; }
+  @media (max-width: 1200px) {
+    .drugs__inner {
+      overflow-x: scroll;
+      top: 0; } }
+
+.drugs__figure {
+  position: absolute;
+  margin: 0;
+  height: 100%; }
+
+.drugs__figure_cv {
+  width: 325px;
+  z-index: 1; }
+
+.drugs__figure_am {
+  width: 300px;
+  left: 340px; }
+
+.drugs__figure_ms {
+  min-width: 235px;
+  left: 650px; }
+
+.drugs__figure_ns {
+  min-width: 165px;
+  left: 875px; }
+
+.drugs__figcaption {
+  position: absolute;
+  bottom: 28px;
+  width: 150px;
+  padding: 17px 10px 12px 10px;
+  font-size: 13px;
+  line-height: 1.25;
+  text-align: center;
+  color: #fff; }
+  .drugs__figcaption::after {
+    content: '';
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 19px 75px 0 75px; }
+
+.drugs__figcaption_cv {
+  background: #ec0b43;
+  left: 85px; }
+  .drugs__figcaption_cv::after {
+    border-color: #ec0b43 transparent transparent transparent; }
+
+.drugs__figcaption_am {
+  background: #6b2f81;
+  left: 152px; }
+  .drugs__figcaption_am::after {
+    border-color: #6b2f81 transparent transparent transparent; }
+
+.drugs__figcaption_ms, .drugs__figcaption_ns {
+  background: #d99010;
+  left: 48px; }
+  .drugs__figcaption_ms::after, .drugs__figcaption_ns::after {
+    border-color: #d99010 transparent transparent transparent; }
+
+.drugs__figcaption_ns {
+  left: 13px; }
+
+.drugs__link:hover .drugs__image {
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%); }
+
+.drugs__image {
+  position: absolute;
+  bottom: 100px;
+  -webkit-transition: -webkit-transform .35s .1s;
+  transition: -webkit-transform .35s .1s;
+  transition: transform .35s .1s;
+  transition: transform .35s .1s, -webkit-transform .35s .1s; }
+
+.drugs__image_cv {
+  left: 0; }
+
+.drugs__image_am {
+  left: -35px; }
+
+.drugs__image_ms {
+  left: -4px; }
+
+.drugs__image_ns {
+  left: -12px; }
+
+.game {
+  padding: 80px 0; }
+  @media (max-width: 768px) {
+    .game {
+      padding: 40px 0; } }
+  @media (max-width: 576px) {
+    .game {
+      padding: 20px 0; } }
+
+.game__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 1200px) {
+    .game__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.game__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 340px; }
+  @media (max-width: 1200px) {
+    .game__price {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media (max-width: 576px) {
+    .game__price {
+      min-width: 0; } }
+
+.game__label {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500; }
+  @media (max-width: 768px) {
+    .game__label {
+      font-size: 17px; } }
+
+.game__amount {
+  position: relative;
+  margin-left: 30px;
+  padding: 15px;
+  background: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #00a886;
+  color: inherit;
+  outline: none;
+  z-index: 15; }
+  .game__amount:focus {
+    -webkit-box-shadow: inset 0px 0px 4px #00a886;
+            box-shadow: inset 0px 0px 4px #00a886; }
+  @media (max-width: 768px) {
+    .game__amount {
+      font-size: 18px;
+      width: 150px !important; } }
+
+.game__box {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+  @media (max-width: 1200px) {
+    .game__box {
+      width: 625px;
+      margin-left: 0;
+      margin-top: 125px;
+      margin-bottom: 50px; } }
+  @media (max-width: 768px) {
+    .game__box {
+      width: auto;
+      margin-top: 80px;
+      margin-bottom: 0px; } }
+
+.game__scale {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 320px;
+  overflow-x: hidden; }
+
+.game__scale_amlodipin {
+  background: url("../img/scale_amlodipin.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_amlodipin {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_amlodipin {
+      background-position: left 3px top 2px; } }
+
+.game__scale_atorvastatin {
+  background: url("../img/scale_atorvastatin.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_atorvastatin {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_atorvastatin {
+      background-position: left 3px top 2px; } }
+
+.game__scale_bisoprolol {
+  background: url("../img/scale_bisoprolol.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_bisoprolol {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_bisoprolol {
+      background-position: left 3px top 2px; } }
+
+.game__scale_chlaritromicin {
+  background: url("../img/scale_chlaritromicin.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_chlaritromicin {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_chlaritromicin {
+      background-position: left 3px top 2px; } }
+
+.game__scale_flukanazol {
+  background: url("../img/scale_flukanazol.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_flukanazol {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_flukanazol {
+      background-position: left 3px top 2px; } }
+
+.game__scale_indapamid_r {
+  background: url("../img/scale_indapamid_r.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_indapamid_r {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_indapamid_r {
+      background-position: left 3px top 2px; } }
+
+.game__scale_indapamid {
+  background: url("../img/scale_indapamid.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_indapamid {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_indapamid {
+      background-position: left 3px top 2px; } }
+
+.game__scale_karvedilol {
+  background: url("../img/scale_karvedilol.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_karvedilol {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_karvedilol {
+      background-position: left 3px top 2px; } }
+
+.game__scale_klaritomicin {
+  background: url("../img/scale_klaritomicin.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_klaritomicin {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_klaritomicin {
+      background-position: left 3px top 2px; } }
+
+.game__scale_levofoksacin {
+  background: url("../img/scale_levofoksacin.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_levofoksacin {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_levofoksacin {
+      background-position: left 3px top 2px; } }
+
+.game__scale_lozartan {
+  background: url("../img/scale_lozartan.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_lozartan {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_lozartan {
+      background-position: left 3px top 2px; } }
+
+.game__scale_melox {
+  background: url("../img/scale_melox.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_melox {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_melox {
+      background-position: left 3px top 2px; } }
+
+.game__scale_nimesulid {
+  background: url("../img/scale_nimesulid.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_nimesulid {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_nimesulid {
+      background-position: left 3px top 2px; } }
+
+.game__scale_ofloksacin {
+  background: url("../img/scale_ofloksacin.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_ofloksacin {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_ofloksacin {
+      background-position: left 3px top 2px; } }
+
+.game__scale_sumatripan {
+  background: url("../img/scale_sumatripan.png") no-repeat left 55px top 3px; }
+  @media (max-width: 768px) {
+    .game__scale_sumatripan {
+      background-position: left top 2px; } }
+  @media (max-width: 576px) {
+    .game__scale_sumatripan {
+      background-position: left 3px top 2px; } }
+
+.game__thumb {
+  position: relative;
+  top: -1px;
+  right: -15px;
+  width: 485px;
+  height: 180px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  cursor: pointer; }
+  .game__thumb:active {
+    -webkit-transform: scale(0.975);
+            transform: scale(0.975); }
+  @media (max-width: 768px) {
+    .game__thumb {
+      width: 275px;
+      height: 100px; } }
+  @media (max-width: 576px) {
+    .game__thumb {
+      right: 0; } }
+
+.game__thumb_amlodipin {
+  background: url("../img/thumb_amlodipin.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_amlodipin {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_atorvastatin {
+  background: url("../img/thumb_atorvastatin.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_atorvastatin {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_bisoprolol {
+  background: url("../img/thumb_bisoprolol.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_bisoprolol {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_chlaritromicin {
+  background: url("../img/thumb_chlaritromicin.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_chlaritromicin {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_flukanazol {
+  background: url("../img/thumb_flukanazol.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_flukanazol {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_indapamid_r {
+  background: url("../img/thumb_indapamid_r.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_indapamid_r {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_indapamid {
+  background: url("../img/thumb_indapamid.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_indapamid {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_karvedilol {
+  background: url("../img/thumb_karvedilol.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_karvedilol {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_klaritomicin {
+  background: url("../img/thumb_klaritomicin.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_klaritomicin {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_levofoksacin {
+  background: url("../img/thumb_levofoksacin.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_levofoksacin {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_lozartan {
+  background: url("../img/thumb_lozartan.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_lozartan {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_melox {
+  background: url("../img/thumb_melox.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_melox {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_nimesulid {
+  background: url("../img/thumb_nimesulid.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_nimesulid {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_ofloksacin {
+  background: url("../img/thumb_ofloksacin.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_ofloksacin {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_sumatripan {
+  background: url("../img/thumb_sumatripan.png") no-repeat right -10px top -55px, url("../img/arrow.png") no-repeat left center; }
+  @media (max-width: 768px) {
+    .game__thumb_sumatripan {
+      background-position: right 10px center, right 156px center;
+      background-size: 70%, 25%; } }
+
+.game__thumb_atorvastatin,
+.game__thumb_indapamid_r,
+.game__thumb_bisoprolol,
+.game__thumb_indapamid,
+.game__thumb_lozartan,
+.game__thumb_ofloksacin,
+.game__thumb_levofoksacin,
+.game__thumb_nimesulid,
+.game__thumb_sumatripan {
+  background-position: right 15px center, left;
+  background-size: 80%, auto; }
+  @media (max-width: 768px) {
+    .game__thumb_atorvastatin,
+    .game__thumb_indapamid_r,
+    .game__thumb_bisoprolol,
+    .game__thumb_indapamid,
+    .game__thumb_lozartan,
+    .game__thumb_ofloksacin,
+    .game__thumb_levofoksacin,
+    .game__thumb_nimesulid,
+    .game__thumb_sumatripan {
+      background-position: right 10px center, right 161px center;
+      background-size: 60%, 15%; } }
+
+.game__thumb_karvedilol {
+  background-position: right 25px top -40px, left;
+  background-size: 85%, auto; }
+  @media (max-width: 768px) {
+    .game__thumb_karvedilol {
+      background-position: right 10px center, right 161px center;
+      background-size: 65%, 15%; } }
+
+.game__thumb_flukanazol {
+  background-position: right 95px center, left;
+  background-size: 70%, auto; }
+  @media (max-width: 768px) {
+    .game__thumb_flukanazol {
+      background-position: right 10px center, right 161px center;
+      background-size: 65%, 15%; } }
+
+.game__thumb_chlaritromicin {
+  background-position: right 110px center, left 7px center;
+  background-size: 60%, auto; }
+  @media (max-width: 768px) {
+    .game__thumb_chlaritromicin {
+      background-position: right 10px center, right 161px center;
+      background-size: 60%, 15%; } }
+
+.game__thumb_melox {
+  background-position: right 17px center, left 7px center;
+  background-size: 80%, auto; }
+  @media (max-width: 768px) {
+    .game__thumb_melox {
+      background-position: right 10px center, right 161px center;
+      background-size: 60%, 15%; } }
+
+.game__modal {
+  position: absolute;
+  left: 375px;
+  width: 665px; }
+  @media (max-width: 1200px) {
+    .game__modal {
+      left: 50%;
+      top: 70px;
+      margin-left: -332px; } }
+  @media (max-width: 768px) {
+    .game__modal {
+      width: 520px;
+      left: 50%;
+      margin-left: -260px; } }
+  @media (max-width: 576px) {
+    .game__modal {
+      width: 100%;
+      left: 0;
+      margin-left: 0; } }
+
+.game__link {
+  position: absolute;
+  bottom: 0; }
+  @media (max-width: 1200px) {
+    .game__link {
+      position: static;
+      margin-top: 80px;
+      margin-bottom: -30px; } }
+  @media (max-width: 768px) {
+    .game__link {
+      bottom: -60px; } }
+
+.game__button {
+  font-weight: 600;
+  outline: none;
+  cursor: pointer; }
+  @media (max-width: 1200px) {
+    .game__button {
+      margin-top: 15px; } }
+
+.page-footer {
+  color: #898e92; }
+  .page-footer .uppercase {
+    text-transform: uppercase;
+    font-weight: 500; }
+  @media (max-width: 768px) {
+    .page-footer {
+      margin-top: 50px; } }
+
+.page-footer__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 768px) {
+    .page-footer__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.page-footer__small {
+  display: inline-block;
+  font-size: 12px; }
+  @media (max-width: 768px) {
+    .page-footer__small {
+      font-size: 11px; } }
+
+.page-footer__small_xs {
+  font-size: 10px; }
+
+.page-footer__contact {
+  margin-right: 20px; }
+  @media (max-width: 768px) {
+    .page-footer__contact {
+      margin-right: 0;
+      margin-top: 40px;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; } }
+
+.results {
+  padding: 40px 0; }
+  @media (max-width: 576px) {
+    .results {
+      padding-bottom: 0; } }
+
+.results__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 576px) {
+    .results__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.results__img {
+  margin-left: 15px;
+  max-width: 100%; }
+  @media (max-width: 576px) {
+    .results__img {
+      margin-left: 0;
+      max-width: 300px; } }
+
+.results__accent {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #00a886;
+  text-transform: uppercase; }
+  @media (max-width: 1200px) {
+    .results__accent {
+      font-size: 35px; } }
+  @media (max-width: 768px) {
+    .results__accent {
+      font-size: 25px; } }
+
+.results__text {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #323333; }
+  @media (max-width: 1200px) {
+    .results__text {
+      font-size: 20px;
+      line-height: 1.35; } }
+  @media (max-width: 768px) {
+    .results__text {
+      font-size: 15px; } }
+
+@media (max-width: 576px) {
+  .results__content {
+    margin-top: 20px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: center; } }
+
+.results__button {
+  padding-left: 90px;
+  padding-right: 90px; }
+  @media (max-width: 768px) {
+    .results__button {
+      font-size: 11px !important;
+      padding: 10px 15px !important; } }
+
+.subscribe {
+  padding: 8em 1em;
+  text-align: center; }
+  .subscribe__text {
+    font-size: 2.5em;
+    color: #00a886;
+    text-transform: uppercase;
+    font-weight: 600; }
+    @media (max-width: 768px) {
+      .subscribe__text {
+        font-size: 2em; } }
+    @media (max-width: 576px) {
+      .subscribe__text {
+        font-size: 1.5em; } }
+  @media (max-width: 768px) {
+    .subscribe {
+      padding-bottom: 1em; } }
+  @media (max-width: 576px) {
+    .subscribe {
+      padding-top: 3em;
+      padding-bottom: 2px; } }
+
+.modal {
+  padding-bottom: 25px;
+  background: #fff;
+  border: 3px solid #00a886;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  -webkit-transition: visibility 0s .55s, opacity .55s, -webkit-transform .55s;
+  transition: visibility 0s .55s, opacity .55s, -webkit-transform .55s;
+  transition: visibility 0s .55s, opacity .55s, transform .55s;
+  transition: visibility 0s .55s, opacity .55s, transform .55s, -webkit-transform .55s;
+  z-index: 15; }
+  @media (max-width: 768px) {
+    .modal {
+      -webkit-transform: translateX(0);
+              transform: translateX(0); } }
+  @media (max-width: 576px) {
+    .modal {
+      padding-bottom: 15px; } }
+  .modal__button {
+    margin-right: 10px; }
+    @media (max-width: 425px) {
+      .modal__button {
+        width: 150px !important; } }
+
+.modal__header, .modal__content, .modal__next, .modal__footer {
+  padding: 20px 30px; }
+  @media (max-width: 576px) {
+    .modal__header, .modal__content, .modal__next, .modal__footer {
+      padding: 10px 20px; } }
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #00a886;
+  color: #fff;
+  text-transform: uppercase; }
+  @media (max-width: 576px) {
+    .modal__header {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media (max-width: 425px) {
+    .modal__header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.modal__answer {
+  font-size: 35px;
+  font-weight: 500; }
+  @media (max-width: 768px) {
+    .modal__answer {
+      font-size: 25px; } }
+  @media (max-width: 425px) {
+    .modal__answer {
+      margin-bottom: 10px; } }
+
+.modal__results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 425px) {
+    .modal__results {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.modal__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+  font-size: 13px;
+  line-height: 17px; }
+  @media (max-width: 768px) {
+    .modal__result {
+      font-size: 10px;
+      line-height: 14px; } }
+  @media (max-width: 425px) {
+    .modal__result {
+      margin-bottom: 10px; } }
+
+.modal__value {
+  margin-left: 5px;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: none; }
+  @media (max-width: 768px) {
+    .modal__value {
+      font-size: 20px; } }
+
+.modal__title {
+  font-size: 20px; }
+  @media (max-width: 768px) {
+    .modal__title {
+      font-size: 18px; } }
+
+.modal__text {
+  font-size: 14px;
+  line-height: 19px; }
+  @media (max-width: 768px) {
+    .modal__text {
+      font-size: 13px; } }
+
+.modal__next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0; }
+
+.modal__status-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: right; }
+
+.modal__completed {
+  font-size: 18px; }
+  @media (max-width: 768px) {
+    .modal__completed {
+      font-size: 15px; } }
+
+.modal__footer {
+  padding-top: 10px; }
+
+.modal__small {
+  display: inline-block;
+  font-size: 9px;
+  line-height: 14px;
+  color: #797979; }
+
+.modal_greeting {
+  padding: 70px 100px;
+  background: radial-gradient(#fff, #b8cfe2);
+  border: 6px solid #00a886;
+  border-radius: 30px;
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%); }
+  @media (max-width: 576px) {
+    .modal_greeting {
+      padding: 50px 30px; }
+      .modal_greeting br {
+        display: none; } }
+  .modal_greeting .modal__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    text-align: center; }
+  .modal_greeting .modal__title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #00a886; }
+    @media (max-width: 768px) {
+      .modal_greeting .modal__title {
+        font-size: 27px; } }
+    @media (max-width: 576px) {
+      .modal_greeting .modal__title {
+        margin-bottom: 15px;
+        font-size: 22px; } }
+  .modal_greeting .modal__text {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 26px;
+    line-height: 35px;
+    font-weight: 300;
+    color: #323333; }
+    @media (max-width: 768px) {
+      .modal_greeting .modal__text {
+        font-size: 21px;
+        line-height: 25px; } }
+    @media (max-width: 576px) {
+      .modal_greeting .modal__text {
+        margin-bottom: 15px;
+        font-size: 18px; } }
+  .modal_greeting .modal__button {
+    padding: 20px 70px; }
+    @media (max-width: 576px) {
+      .modal_greeting .modal__button {
+        padding: 20px;
+        width: auto !important; } }
+
+.button {
+  display: inline-block;
+  padding: 16px 35px;
+  background: #00a886;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+  -webkit-transition: background .35s, -webkit-transform .15s;
+  transition: background .35s, -webkit-transform .15s;
+  transition: background .35s, transform .15s;
+  transition: background .35s, transform .15s, -webkit-transform .15s; }
+  .button:hover {
+    background: #00b28e; }
+  .button:active {
+    -webkit-transform: scale(0.995);
+            transform: scale(0.995); }
+  @media (max-width: 768px) {
+    .button {
+      font-size: 14px; } }
+  @media (max-width: 768px) {
+    .button {
+      font-size: 12px;
+      white-space: normal; } }
+  @media (max-width: 576px) {
+    .button {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 12px; } }
+
+.button_small, .game__amount {
+  width: 180px; }
