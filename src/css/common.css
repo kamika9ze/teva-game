@@ -64,8 +64,8 @@ html {
     width: 100%;
     margin: auto;
     margin-top: 0;
-    padding-left: 15px;
-    padding-right: 15px
+    padding-left: 7px;
+    padding-right: 7px
 }
 
 @media (max-width:1200px) {
@@ -275,8 +275,7 @@ html {
 
 .link {
     font-size: 12px;
-    font-style: italic;
-    color: #23288b
+    color: #009F3A
 }
 
 @media (max-width:768px) {
@@ -304,7 +303,7 @@ html {
 }
 
 .page-wrapper {
-    height: 100%;
+    min-height: 100%;
     padding-bottom: 43px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -608,7 +607,7 @@ html {
 }
 
 .game {
-    padding: 80px 0
+    padding: 53px 0 92px;
 }
 
 @media (max-width:768px) {
@@ -649,7 +648,8 @@ html {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 340px
+    min-width: 328px;
+    margin-top: 10px;
 }
 
 @media (max-width:1200px) {
@@ -681,14 +681,14 @@ html {
 .game__amount {
     position: relative;
     margin-left: 30px;
-    padding: 15px;
+    padding: 11px 15px;
     background: #EFEFEF;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 28px;
+    color: #616160;
+    font-weight: 500;
     text-align: center;
     border: 0;
     border-bottom: 1px solid #a1a09f;
-    color: inherit;
     outline: 0;
     z-index: 15
 }
@@ -708,7 +708,7 @@ html {
 .game__box {
     margin-top: 50px;
     margin-bottom: 40px;
-    margin-left: 60px;
+    margin-left: 65px;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1
@@ -987,10 +987,10 @@ html {
 
 .game__thumb {
     position: relative;
-    top: -1px;
-    right: -15px;
+    top: 0px;
+    right: 2px;
     width: 485px;
-    height: 180px;
+    height: 207px;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;
@@ -1005,7 +1005,7 @@ html {
 
 @media (max-width:768px) {
     .game__thumb {
-        width: 275px;
+        width: 273px;
         height: 100px
     }
 }
@@ -1017,13 +1017,13 @@ html {
 }
 
 .game__thumb_amlodipin {
-    background: url(../img/thumb_amlodipin.png) no-repeat right -10px top -55px, url(../img/arrow.png) no-repeat left center
+    background: url(../img/thumb_amlodipin.png) no-repeat right 0px top -31px, url(../img/arrow.png) no-repeat left center
 }
 
 @media (max-width:768px) {
     .game__thumb_amlodipin {
-        background-position: right 10px center, right 156px center;
-        background-size: 70%, 25%
+        background-position: right 10px center, right 170px center;
+        background-size: 57%, 10%;
     }
 }
 
@@ -1289,7 +1289,7 @@ html {
 
 .game__link {
     position: absolute;
-    bottom: 0
+    bottom: -53px;
 }
 
 @media (max-width:1200px) {
@@ -1310,6 +1310,7 @@ html {
     font-weight: 600;
     outline: 0;
     cursor: pointer;
+    padding: 14px 45px!important;
 }
 
 @media (max-width:1200px) {
@@ -1319,12 +1320,13 @@ html {
 }
 
 .page-footer {
+  width: 100%;
+  display: block;
     color: #5B5B5B;
 }
 
 .page-footer .uppercase {
     text-transform: uppercase;
-    font-weight: 500;
 }
 
 @media (max-width:768px) {
@@ -1334,7 +1336,7 @@ html {
 }
 
 .page-footer__inner {
-    padding-left: 20px;
+    padding-left: 7px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1368,6 +1370,7 @@ html {
 
 .page-footer__contact {
     margin-right: 20px;
+    width: 573px;
 }
 
 @media (max-width:768px) {
@@ -1567,7 +1570,7 @@ html {
 .modal__footer,
 .modal__header,
 .modal__next {
-    padding: 20px 30px
+    padding: 14px 20px 14px;
 }
 
 @media (max-width:576px) {
@@ -1586,9 +1589,8 @@ html {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: #00a886;
+    background: #009F3A;
     color: #fff;
-    text-transform: uppercase
 }
 
 @media (max-width:576px) {
@@ -1609,8 +1611,10 @@ html {
 }
 
 .modal__answer {
-    font-size: 35px;
-    font-weight: 500
+    font-size : 46px;
+    line-height : 96px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 @media (max-width:768px) {
@@ -1626,9 +1630,10 @@ html {
 }
 
 .modal__results {
-    display: -webkit-box;
+    /*display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex*/
+    width: 247px;
 }
 
 @media (max-width:425px) {
@@ -1644,15 +1649,24 @@ html {
 }
 
 .modal__result {
-    display: -webkit-box;
+    /*display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex;*/
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-left: 15px;
     font-size: 13px;
-    line-height: 17px
+    line-height: 17px;
+    width: 100%;
+    display: inline-block;
+}
+.modal__result:first-child {
+  margin-bottom: 12px;
+}
+
+.modal__result span {
+  display: inline-block;
+  line-height: 1.4;
 }
 
 @media (max-width:768px) {
@@ -1671,8 +1685,9 @@ html {
 .modal__value {
     margin-left: 5px;
     font-size: 30px;
-    font-weight: 500;
-    text-transform: none
+    font-weight: 600;
+    text-transform: none;
+    float: right;
 }
 
 @media (max-width:768px) {
@@ -1805,11 +1820,12 @@ html {
 
 .modal_greeting .modal__text {
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 58px;
     font-size: 26px;
     line-height: 35px;
     font-weight: 300;
-    color: #323333
+    color: #fff;
+    text-transform: uppercase;
 }
 
 @media (max-width:768px) {
@@ -1836,6 +1852,7 @@ html {
     line-height : 25.71px;
     padding: 11px 38px;
     color : #009F3A;
+    text-decoration: none;
 }
 
 @media (max-width:576px) {
@@ -1846,17 +1863,19 @@ html {
 }
 
 .button {
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    padding: 14px 35px;
-    background : #009F3A;
-    background : rgba(0, 159, 58, 1);
-    border-radius : 25px;
-    -moz-border-radius : 25px;
-    -webkit-border-radius : 25px;
+    padding: 11px 45px;
+    background: #009F3A;
+    background: rgba(0, 159, 58, 1);
+    border-radius: 34px;
+    -moz-border-radius: 34px;
+    -webkit-border-radius: 34px;
     font-size : 19px;
     font-weight: 500;
     line-height : 23.13px;
-    letter-spacing : -0.09px;
+    letter-spacing : -0.2px;
     color : #FFFFFF;
     color : rgb(255, 255, 255);
     border: none;
