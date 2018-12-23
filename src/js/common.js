@@ -313,7 +313,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             localStorage.setItem('count', 0);
           }
 
-          this._msgs = ['Верно!', 'Вы были близки <br> к правильному ответу!', 'Хорошая попытка, но данный <br> препарат доступнее для <br> пациентов!', 'Хорошая попытка, но данный <br> препарат относится к средней ценовой <br> категории!'];
+          this._msgs = ['Верно!', 'Вы были близки <br> к правильному ответу!', 'Хорошая попытка, но данный <br> препарат доступнее <br> для  пациентов!', 'Хорошая попытка, но данный <br> препарат относится к средней ценовой <br> категории!'];
 
           this._clss = ['page_modal_correct', 'page_modal_close', 'page_modal_afford', 'page_modal_average'];
 

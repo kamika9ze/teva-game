@@ -23,12 +23,12 @@
 
 @font-face {
     font-family: 'Avenir_Next_Cyr';
-    src: url('../fonts/avenir/AvenirNext-Heavy.eot');
-    src: url('../fonts/avenir/AvenirNext-Heavyr.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/avenir/AvenirNext-Heavy.woff2') format('woff2'),
-        url('../fonts/avenir/AvenirNext-Heavy.woff') format('woff'),
-        url('../fonts/avenir/AvenirNext-Heavy.ttf') format('truetype'),
-        url('../fonts/avenir/AvenirNext-Heavy.svg#AvenirNext-Heavy') format('svg');
+    src: url('../fonts/avenir/AvenirNext-DemiBold.eot');
+    src: url('../fonts/avenir/AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/avenir/AvenirNext-DemiBold.woff2') format('woff2'),
+        url('../fonts/avenir/AvenirNext-DemiBold.woff') format('woff'),
+        url('../fonts/avenir/AvenirNext-DemiBold.ttf') format('truetype'),
+        url('../fonts/avenir/AvenirNext-DemiBold.svg#AvenirNext-DemiBold') format('svg');
     font-weight: 600;
     font-style: normal;
 }
@@ -198,7 +198,7 @@ html {
 .page_modal_afford .modal,
 .page_modal_average .modal,
 .page_modal_close .modal {
-    border: 3px solid #d15050
+    /*border: 3px solid #d15050*/
 }
 
 .page_modal_afford .modal__header,
@@ -207,13 +207,14 @@ html {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: #d15050
+    background: #E83D32;
 }
 
 .page_modal_afford .modal__answer,
 .page_modal_average .modal__answer,
 .page_modal_close .modal__answer {
-    font-size: 19px;
+    font-size: 24px;
+    line-height: 24px;
     text-transform: none
 }
 
@@ -258,19 +259,18 @@ html {
 .page_modal_afford .game__amount,
 .page_modal_average .game__amount,
 .page_modal_close .game__amount {
-    border: 1px solid #d15050
+    /*border: 1px solid #d15050*/
 }
 
 .page_modal_close .modal {
-    border: 3px solid #00a886
 }
 
 .page_modal_close .modal__header {
-    background: #00a886
+    background: #009F3A;
 }
 
 .page_modal_close .game__amount {
-    border: 1px solid #00a886
+    /*border: 1px solid #00a886*/
 }
 
 .link {
@@ -290,6 +290,16 @@ html {
     font-style: normal;
     text-decoration: none;
     color: #00a886;
+    margin-top: 20px;
+    padding-left: 60px
+}
+.results .link_repeat {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: #009F3A;
     margin-top: 20px;
     padding-left: 60px
 }
@@ -525,8 +535,8 @@ html {
     bottom: 28px;
     width: 150px;
     padding: 17px 10px 12px 10px;
-    font-size: 13px
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     line-height: 1.25;
     text-align: center;
     color: #fff
@@ -757,7 +767,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_amlodipin {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -773,7 +783,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_atorvastatin {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -789,7 +799,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_bisoprolol {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -805,7 +815,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_chlaritromicin {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -821,7 +831,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_flukanazol {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -837,7 +847,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_indapamid_r {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -853,7 +863,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_indapamid {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -869,7 +879,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_karvedilol {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -885,7 +895,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_klaritomicin {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -901,7 +911,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_levofoksacin {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -917,7 +927,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_lozartan {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -933,7 +943,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_melox {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -949,7 +959,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_nimesulid {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -965,7 +975,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_ofloksacin {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -981,7 +991,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_sumatripan {
-        background-position: left 3px top 2px
+        background-position: left 3px top 3px
     }
 }
 
@@ -1028,7 +1038,7 @@ html {
 }
 
 .game__thumb_atorvastatin {
-    background: url(../img/thumb_atorvastatin.png) no-repeat right -10px top -55px, url(../img/arrow.png) no-repeat left center
+    background: url(../img/thumb_atorvastatin.png) no-repeat right 0px top -31px, url(../img/arrow.png) no-repeat left center
 }
 
 @media (max-width:768px) {
@@ -1204,8 +1214,8 @@ html {
     .game__thumb_nimesulid,
     .game__thumb_ofloksacin,
     .game__thumb_sumatripan {
-        background-position: right 10px center, right 161px center;
-        background-size: 60%, 15%
+        background-position: right 10px center, right 170px center;
+        background-size: 57%, 10%;
     }
 }
 
@@ -1260,7 +1270,7 @@ html {
 .game__modal {
     position: absolute;
     left: 375px;
-    width: 665px
+    width: 709px
 }
 
 @media (max-width:1200px) {
@@ -1324,7 +1334,10 @@ html {
   display: block;
     color: #5B5B5B;
 }
-
+.page-footer .button {
+    font-size: 17px;
+    padding: 11px 58px;
+}
 .page-footer .uppercase {
     text-transform: uppercase;
 }
@@ -1428,10 +1441,10 @@ html {
 
 .results__accent {
     display: block;
-    margin-bottom: 25px;
-    font-size: 50px;
-    font-weight: 600;
-    color: #00a886;
+    margin-bottom: 55px;
+    font-size: 48px;
+    /* font-weight: 600; */
+    color: #009F3A;
     text-transform: uppercase
 }
 
@@ -1450,11 +1463,10 @@ html {
 .results__text {
     margin-top: 0;
     margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 42px;
+    font-size: 24px;
+    line-height: 24px;
     text-transform: uppercase;
-    color: #323333
+    color: #000;
 }
 
 @media (max-width:1200px) {
@@ -1478,6 +1490,11 @@ html {
         order: 1;
         text-align: center
     }
+}
+
+.results__content .results__button {
+    font-size: 17px;
+    padding: 11px 58px;
 }
 
 .results__button {
@@ -1570,7 +1587,7 @@ html {
 .modal__footer,
 .modal__header,
 .modal__next {
-    padding: 14px 20px 14px;
+    padding: 14px 25px 14px;
 }
 
 @media (max-width:576px) {
@@ -1591,6 +1608,9 @@ html {
     justify-content: space-between;
     background: #009F3A;
     color: #fff;
+    align-items: center;
+    padding-right: 33px;
+    padding-left: 33px;
 }
 
 @media (max-width:576px) {
@@ -1612,7 +1632,7 @@ html {
 
 .modal__answer {
     font-size : 46px;
-    line-height : 96px;
+    line-height : 1;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -1665,8 +1685,17 @@ html {
 }
 
 .modal__result span {
-  display: inline-block;
-  line-height: 1.4;
+    display: inline-block;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.modal__result span sup {
+    top: 0em;
+    font-size: 117%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 @media (max-width:768px) {
@@ -1684,7 +1713,7 @@ html {
 
 .modal__value {
     margin-left: 5px;
-    font-size: 30px;
+    font-size: 30px!important;
     font-weight: 600;
     text-transform: none;
     float: right;
@@ -1697,9 +1726,25 @@ html {
 }
 
 .modal__title {
-    font-size: 20px
+    font-size: 14px;
+    font-weight: 300;
+    color : #636362;
 }
 
+.game__modal {
+    padding-bottom: 9px;
+}
+.game__modal .link {
+    font-size: 13px;
+    font-style: italic;
+    margin-top: -15px;
+    font-weight: 500;
+}
+
+.game__modal .modal__button {
+    width: 134px;
+    padding: 7px 0;
+}
 @media (max-width:768px) {
     .modal__title {
         font-size: 18px
@@ -1708,7 +1753,10 @@ html {
 
 .modal__text {
     font-size: 14px;
-    line-height: 19px
+    font-weight: 300;
+    line-height: 18px;
+    color : #636362;
+    min-height: 99px;
 }
 
 @media (max-width:768px) {
@@ -1742,7 +1790,9 @@ html {
 }
 
 .modal__completed {
-    font-size: 18px
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
 }
 
 @media (max-width:768px) {
@@ -1752,14 +1802,15 @@ html {
 }
 
 .modal__footer {
-    padding-top: 10px
+    padding: 16px 25px 0;
 }
 
 .modal__small {
     display: inline-block;
-    font-size: 9px;
-    line-height: 14px;
-    color: #797979
+    font-size: 10px;
+    line-height: 12px;
+    color: #636362;
+    letter-spacing : -0.05px;
 }
 
 .modal_greeting {

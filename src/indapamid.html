@@ -22,13 +22,7 @@
 	<!-- End Google Analytics -->
     <title>Индапамид</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/common.min.css">
+    @@include('./parts/head.html')
 
 </head>
 
@@ -36,24 +30,7 @@
 
     <div class="page-wrapper">
 
-        <header class="page-header">
-        
-            <div class="page-header__inner">
-        
-                <h1 class="page-header__title">Препараты мнн-тева,
-                    <br>
-                    <small>отпускаемые по рецепту</small>
-                </h1>
-        
-                <div class="logo">
-        
-                    <img src="img/logo.png" class="logo__img">
-        
-                </div>
-        
-            </div>
-        
-        </header>
+        @@include('./parts/header.html')
         
         <main class="game">
         
@@ -64,7 +41,7 @@
                     <label class="game__label">
                         <span>Цена:</span>
         
-                        <input type="number" class="game__amount" value="60" step="1" min="0" max="120" data-step="80" data-price="64" disabled>
+                        <input type="number" class="game__amount" value="60" step="1" min="0" max="120" data-step="80" data-price="95" disabled>
         
                     </label>
         
@@ -106,8 +83,7 @@
         
                         <h2 class="modal__title">История создания МНН ИНДАПАМИД</h2>
         
-                        <p class="modal__text">Начало использования диуретиков в клинической практике относится к 1950–м годам. Тиазидный диуретик индапамид был зарегистрирован
-                        для медицинского применения в 1974 г. В 1997 г. была разработана лекарственная форма замедленного высвобождения индапамида (ретард)<sup>1</sup>.</p>
+                        <p class="modal__text">Начало использования диуретиков в клинической практике относится к 1950–м годам. Тиазидный диуретик индапамид был зарегистрирован для медицинского применения в 1974 г. В 1997 г. была разработана лекарственная форма замедленного высвобождения индапамида (ретард)<sup>1</sup>.</p>
         
                     </div>
         
@@ -127,7 +103,7 @@
         
                     <footer class="modal__footer">
         
-                        <small class="modal__small">* По данным IMS Health (IQVIA), средние розничные цены в аптеках, август 2017. <br> 1. Indapamide at the US National Library of Medicine Medical Subject Headings (MeSH).</small>
+                        <small class="modal__small">* По данным IQVIA data Q3 средние розничные цены в аптеках, 2018. <br>1. Indapamide at the US National Library of Medicine Medical Subject Headings (MeSH).</small>
         
                     </footer>
         
@@ -152,26 +128,8 @@
             </div>
         
         </main>
-        
-        <footer class="page-footer">
-        
-            <div class="page-footer__inner">
-        
-                <div class="page-footer__contact">
-        
-                    <small class="page-footer__small">
-                        <span class="uppercase">Amlo-ru-0048-doc</span>
-                         <br> Имеются противопоказания, необходимо ознакомиться с инструкцией по применению.
-                        <br> За дополнительной информацией обращайтесь: ООО «Тева», Россия, 115054, Москва, ул. Валовая, д.35
-                        <br> Тел. +7 495 644-22-34. факс +7 495 644-22-35. www.teva.ru</small>
-                    <small class="page-footer__small page-footer__small_xs">Для информирования специалистов в области здравоохранения. Не для демонстрации пациентам.</small>
-        
-                </div>
-        
-                <a href="https://www.doktornarabote.ru/Page/1001408?subscribe=1" target="_top" class="button" onclick="ga('send', 'event', 'button', 'subscribe', 'true')">Подписаться на новые выпуски</a>
-            </div>
-        
-        </footer>
+
+        @@include('./parts/footer2.html')
         
     </div>
 
