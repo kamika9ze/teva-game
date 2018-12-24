@@ -328,7 +328,6 @@ html {
 
 @media (max-width:1200px) {
     .page-wrapper {
-        padding: 35px 0
     }
 }
 
@@ -1434,10 +1433,10 @@ html {
 .results__img {
     position: absolute;
     bottom: -1px;
-    left: 663px;
+    left: 46.06vw;
     margin-left: 15px;
-    max-width: 100%;
     width: 42.23vw;
+    max-width: 608px;
 }
 @media (max-width: 1200px) {
     .results__img {
@@ -1510,6 +1509,12 @@ html {
 .results__content .results__button {
     font-size: 17px;
     padding: 11px 58px;
+}
+@media (min-width:576px) and (max-width:768px) {
+    .results__content .results__button {
+        padding: 11px 12px;
+        white-space: nowrap;
+    }
 }
 
 .results__button {
@@ -1710,6 +1715,10 @@ html {
     font-size: 14px;
 }
 
+.modal__result:first-child span.modal__value {
+    margin-right: 25px;
+}
+
 .modal__result span sup {
     top: 0em;
     font-size: 117%;
@@ -1733,7 +1742,7 @@ html {
 
 .modal__value {
     margin-left: 5px;
-    font-size: 30px!important;
+    font-size: 33px!important;
     font-weight: 600;
     text-transform: none;
     float: right;
@@ -1830,7 +1839,7 @@ html {
     font-size: 10px;
     line-height: 12px;
     color: #636362;
-    letter-spacing : -0.05px;
+    letter-spacing : -0.1px;
 }
 
 .modal_greeting {
