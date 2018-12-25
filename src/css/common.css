@@ -277,6 +277,9 @@ html {
     font-size: 12px;
     color: #009F3A
 }
+.link:hover {
+    color: #68c03f;
+}
 
 @media (max-width:768px) {
     .link {
@@ -1967,7 +1970,7 @@ html {
 }
 
 .button:hover {
-    background: #00b28e
+    background: #68c03f;
 }
 
 .button:active {
