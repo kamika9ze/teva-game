@@ -802,7 +802,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_bisoprolol {
-        background-position: left 3px top 3px
+        background-position: left 3px top 4px
     }
 }
 
@@ -818,7 +818,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_chlaritromicin {
-        background-position: left 3px top 3px
+        background-position: left 3px top 4px
     }
 }
 
@@ -850,7 +850,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_indapamid_r {
-        background-position: left 3px top 3px
+        background-position: left 3px top 5px
     }
 }
 
@@ -914,7 +914,7 @@ html {
 
 @media (max-width:576px) {
     .game__scale_levofoksacin {
-        background-position: left 3px top 3px
+        background-position: left 3px top 2px
     }
 }
 
@@ -1003,7 +1003,7 @@ html {
     top: 0px;
     right: 2px;
     width: 485px;
-    height: 207px;
+    height: 270px;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;
@@ -1030,18 +1030,18 @@ html {
 }
 
 .game__thumb_amlodipin {
-    background: url(../img/thumb_amlodipin.png) no-repeat right 0px top -31px, url(../img/arrow.png) no-repeat left center
+    background: url(../img/thumb_amlodipin.png) no-repeat right 0px top 28%, url(../img/arrow.png) no-repeat left center
 }
 
 @media (max-width:768px) {
     .game__thumb_amlodipin {
-        background-position: right 10px center, right 170px center;
+        background-position: right -2px center, right 153px center;
         background-size: 57%, 10%;
     }
 }
 
 .game__thumb_atorvastatin {
-    background: url(../img/thumb_atorvastatin.png) no-repeat right 0px top -31px, url(../img/arrow.png) no-repeat left center
+    background: url(../img/thumb_atorvastatin.png) no-repeat right 0px top 28%, url(../img/arrow.png) no-repeat left center
 }
 
 @media (max-width:768px) {
@@ -1063,7 +1063,7 @@ html {
 }
 
 .game__thumb_chlaritromicin {
-    background: url(../img/thumb_chlaritromicin.png) no-repeat right -10px top -55px, url(../img/arrow.png) no-repeat left center
+    background: url(../img/thumb_chlaritromicin.png) no-repeat right -10px top -55px, url(../img/arrow.png) no-repeat left center;
 }
 
 @media (max-width:768px) {
@@ -1085,7 +1085,7 @@ html {
 }
 
 .game__thumb_indapamid_r {
-    background: url(../img/thumb_indapamid_r.png) no-repeat right -10px top -55px, url(../img/arrow.png) no-repeat left center
+    background: url(../img/thumb_indapamid_r.png) no-repeat right -30px center, url(../img/arrow.png) no-repeat left center
 }
 
 @media (max-width:768px) {
@@ -1197,14 +1197,13 @@ html {
 .game__thumb_atorvastatin,
 .game__thumb_bisoprolol,
 .game__thumb_indapamid,
-.game__thumb_indapamid_r,
 .game__thumb_levofoksacin,
 .game__thumb_lozartan,
 .game__thumb_nimesulid,
 .game__thumb_ofloksacin,
 .game__thumb_sumatripan {
-    background-position: right 15px center, left;
-    background-size: 80%, auto
+    background-position: right center, left center;
+    background-size: initial;
 }
 
 @media (max-width:768px) {
@@ -1217,56 +1216,62 @@ html {
     .game__thumb_nimesulid,
     .game__thumb_ofloksacin,
     .game__thumb_sumatripan {
-        background-position: right 10px center, right 170px center;
-        background-size: 57%, 10%;
+        background-position: right -1px center, right 153px center;
+        background-size: 55%, 10%;
     }
 }
 
 .game__thumb_karvedilol {
-    background-position: right 25px top -40px, left;
-    background-size: 85%, auto
+    background-position: left top 100%, left center;
+    background-size: initial;
 }
 
 @media (max-width:768px) {
     .game__thumb_karvedilol {
-        background-position: right 10px center, right 161px center;
-        background-size: 65%, 15%
+        background-position: right -1px center, right 153px center;
+        background-size: 55%, 10%;
     }
 }
 
 .game__thumb_flukanazol {
-    background-position: right 95px center, left;
-    background-size: 70%, auto
+    background-position: right center, left center;
+    background-size: initial;
 }
 
 @media (max-width:768px) {
     .game__thumb_flukanazol {
-        background-position: right 10px center, right 161px center;
-        background-size: 65%, 15%
+        background-position: right -1px center, right 153px center;
+        background-size: 55%, 10%;
     }
 }
 
 .game__thumb_chlaritromicin {
-    background-position: right 110px center, left 7px center;
-    background-size: 60%, auto
+    background-position: right center, left center;
+    background-size: initial;
 }
 
 @media (max-width:768px) {
     .game__thumb_chlaritromicin {
-        background-position: right 10px center, right 161px center;
-        background-size: 60%, 15%
+      background-position: right -2px center, right 141px center;
+      background-size: 51%, 10%;
+    }
+}
+@media (min-width:769px) and (max-width:1200px) {
+    .game__thumb_chlaritromicin {
+        background-position: right center, left 20px center;
+        background-size: initial;
     }
 }
 
 .game__thumb_melox {
-    background-position: right 17px center, left 7px center;
-    background-size: 80%, auto
+    background-position: right center, left center;
+    background-size: initial;
 }
 
 @media (max-width:768px) {
     .game__thumb_melox {
-        background-position: right 10px center, right 161px center;
-        background-size: 60%, 15%
+        background-position: right -1px center, right 153px center;
+        background-size: 55%, 10%;
     }
 }
 
@@ -1789,6 +1794,7 @@ html {
     line-height: 18px;
     color : #636362;
     min-height: 99px;
+    padding: 0 3px;
 }
 
 @media (max-width:768px) {
@@ -1938,9 +1944,12 @@ html {
     text-decoration: none;
 }
 
+.modal_greeting .modal__button:hover {
+    color: #fff;
+}
 @media (max-width:576px) {
     .modal_greeting .modal__button {
-        padding: 20px;
+        /*padding: 20px;*/
         width: auto!important
     }
 }
